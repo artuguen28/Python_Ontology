@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.example.org/library.owl"
+         xmlns="http://www.example.org/library.owl#">
+
+<owl:Ontology rdf:about="http://www.example.org/library.owl"/>
+
+<owl:ObjectProperty rdf:about="#escritoPor">
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="#Autor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#lidoPor">
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="#Leitor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#pertenceGenero">
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="#Genero"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#Obra">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Pessoa">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Genero">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Autor">
+  <rdfs:subClassOf rdf:resource="#Pessoa"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Leitor">
+  <rdfs:subClassOf rdf:resource="#Pessoa"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Livro">
+  <rdfs:subClassOf rdf:resource="#Obra"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Artigo">
+  <rdfs:subClassOf rdf:resource="#Obra"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#Guerra dos Tronos">
+  <rdf:type rdf:resource="#Livro"/>
+  <escritoPor rdf:resource="#George R. R. Martin"/>
+  <lidoPor rdf:resource="#Arthur Uguen"/>
+  <pertenceGenero rdf:resource="#Fantasia"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#George R. R. Martin">
+  <rdf:type rdf:resource="#Livro"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fantasia">
+  <rdf:type rdf:resource="#Genero"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Crime e Castigo">
+  <rdf:type rdf:resource="#Livro"/>
+  <escritoPor rdf:resource="#Fiódor Dostoiévski"/>
+  <lidoPor rdf:resource="#Arthur Uguen"/>
+  <lidoPor rdf:resource="#Fulano de Tal"/>
+  <pertenceGenero rdf:resource="#Romance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fiódor Dostoiévski">
+  <rdf:type rdf:resource="#Livro"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Romance">
+  <rdf:type rdf:resource="#Genero"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#MobileNetV2: Inverted Residuals and Linear Bottlenecks">
+  <rdf:type rdf:resource="#Artigo"/>
+  <escritoPor rdf:resource="#Mark Sandler"/>
+  <escritoPor rdf:resource="#Andrew Howard"/>
+  <escritoPor rdf:resource="#Menglong Zhu"/>
+  <lidoPor rdf:resource="#Arthur Uguen"/>
+  <lidoPor rdf:resource="#Fulano de Tal"/>
+  <pertenceGenero rdf:resource="#Paper"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mark Sandler">
+  <rdf:type rdf:resource="#Autor"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Andrew Howard">
+  <rdf:type rdf:resource="#Autor"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Menglong Zhu">
+  <rdf:type rdf:resource="#Autor"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Paper">
+  <rdf:type rdf:resource="#Genero"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Arthur Uguen">
+  <rdf:type rdf:resource="#Leitor"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fulano de Tal">
+  <rdf:type rdf:resource="#Leitor"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
